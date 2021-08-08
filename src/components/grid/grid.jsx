@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "./grid.css";
 import { WeatherContext } from "../weather/weather";
 import to12Hrformat from "../../services/dateTime.js";
