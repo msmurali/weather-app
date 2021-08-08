@@ -1,0 +1,12 @@
+<svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="rain-icon">
+<path id="cloud-icon" d="M28.4764 11.2263C28.5094 10.9028 28.5264 10.5747 28.5264 10.2428C28.5264 4.81124 23.9974 0.408081 18.4106 0.408081C12.8239 0.408081 8.2949 4.81124 8.2949 10.2428C8.2949 10.5747 8.31189 10.9028 8.34489 11.2263H8.09259C3.62319 11.2263 0 14.7488 0 19.0941C0 23.4394 3.62319 26.9619 8.09259 26.9619H32.3704C36.8397 26.9619 40.4629 23.4394 40.4629 19.0941C40.4629 14.7488 36.8397 11.2263 32.3704 11.2263H28.4764Z" fill="white"/>
+<g id="rain-drops">
+<line id="Line 10" x1="9.30176" y1="28.9865" x2="2.97345" y2="35.3148" stroke="#06B0E6" stroke-width="1.26447" stroke-linecap="round"/>
+<line id="Line 12" x1="21.7642" y1="29.1204" x2="15.4359" y2="35.4487" stroke="#06B0E6" stroke-width="1.26447" stroke-linecap="round"/>
+<line id="Line 13" x1="34.2266" y1="29.2543" x2="27.8983" y2="35.5826" stroke="#06B0E6" stroke-width="1.26447" stroke-linecap="round"/>
+<line id="Line 14" x1="27.4541" y1="29.7527" x2="21.1258" y2="36.081" stroke="#06B0E6" stroke-width="1.26447" stroke-linecap="round"/>
+<line id="Line 11" x1="15.7456" y1="29.1204" x2="11.6415" y2="33.2246" stroke="#06B0E6" stroke-width="1.26447" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

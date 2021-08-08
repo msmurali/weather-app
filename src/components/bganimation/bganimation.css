@@ -1,0 +1,95 @@
+.animation-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.rain,
+.clouds {
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+}
+
+.rain {
+  display: none;
+  background: url("../../asset/img/rain.png") #020063;
+  animation: rain 0.3s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: -2% 10%;
+  }
+}
+
+.rain::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../asset/img/lighting.png");
+  top: -100px;
+  left: 0;
+  transform: rotate(180deg);
+  animation: light 6s linear;
+  opacity: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@keyframes light {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  21% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  31% {
+    opacity: 0.5;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.clouds {
+  background: url("../../asset/img/cloud.png") #020063;
+  background-size: cover;
+  animation: move 200s linear infinite;
+  filter: blur(3px);
+  /* display: none; */
+}
+@keyframes move {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: 5440px;
+  }
+}

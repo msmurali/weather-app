@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.menu-container:active {
+  transform: translateY(2px);
+}
