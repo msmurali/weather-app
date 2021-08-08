@@ -6,27 +6,23 @@ const api = {
   locationAPIKEY: "RZbqtk7jtAQaSLdQ7ULhIHLIU4Lo3zAr",
 };
 
-const getCoords = () => {
-  const result = {};
+
+const fetchData = async () => {
+  
+  
+  const coords = {};
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        result["lat"] = position.coords.latitude;
-        result["lon"] = position.coords.longitude;
+        coords["lat"] = position.coords.latitude;
+        coords["lon"] = position.coords.longitude;
       },
       (error) => {
         console.log(error);
       }
     );
   }
-
-  return result;
-};
-
-const fetchData = async () => {
-  const coords = getCoords();
-
   const result = {};
 
   const weather = `${api.weatherURL}?lat=${coords.lat}&lon=${coords.lon}&units=metric&exclude=minutely&appid=${api.weatherAPIKEY}`;
