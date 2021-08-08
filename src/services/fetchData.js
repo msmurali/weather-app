@@ -5,25 +5,25 @@ const api = {
   weatherAPIKEY: "9a3183b4d5cb42b45820262429ccb19a",
   locationAPIKEY: "RZbqtk7jtAQaSLdQ7ULhIHLIU4Lo3zAr",
 };
-
+  
+const getCoords = () => {
+    return new Promise((resolve, reject) => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          resolve({
+            lat: position.coords.latitude,
+            lon: position.coords.longitude,
+          });
+        });
+      } else {
+        reject("GeoLocation NA");
+      }
+    });
+ };
 
 const fetchData = async () => {
   
-  
-  const coords = {};
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        console.log(position);
-        coords = position.coords;
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-  console.log(coords);
+  const coords = await getCoords();
   const result = {};
 
   const weather = `${api.weatherURL}?lat=${coords.lat}&lon=${coords.lon}&units=metric&exclude=minutely&appid=${api.weatherAPIKEY}`;
