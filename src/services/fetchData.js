@@ -15,6 +15,7 @@ const fetchData = async () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        console.log(position);
         coords["lat"] = position.coords.latitude;
         coords["lon"] = position.coords.longitude;
       },
@@ -23,6 +24,7 @@ const fetchData = async () => {
       }
     );
   }
+  console.log(coords);
   const result = {};
 
   const weather = `${api.weatherURL}?lat=${coords.lat}&lon=${coords.lon}&units=metric&exclude=minutely&appid=${api.weatherAPIKEY}`;
