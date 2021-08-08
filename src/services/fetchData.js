@@ -16,8 +16,7 @@ const fetchData = async () => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         console.log(position);
-        coords["lat"] = position.coords.latitude;
-        coords["lon"] = position.coords.longitude;
+        coords = position.coords;
       },
       (error) => {
         console.log(error);
